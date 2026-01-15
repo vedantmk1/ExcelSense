@@ -92,14 +92,12 @@ Web browser (Chrome / Edge / Firefox)
 git clone [https://github.com/vedantmk1/ExcelSense.git](https://github.com/vedantmk1/ExcelSense.git)
 cd ExcelSense
 
-2️⃣ Install Dependencies
-pip install -r requirements.txt
-
-3️⃣ Run the Application
+2️⃣ Run the Application
 python app.py
 
-4️⃣ Open in Browser
+3️⃣ Open in Browser
 http://127.0.0.1:5000
+
 
 ## How to Use
 
