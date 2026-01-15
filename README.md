@@ -89,7 +89,7 @@ Web browser (Chrome / Edge / Firefox)
 
 ## Installation & Setup
 1️⃣ Clone the Repository
-git clone [https://github.com/your-username/ExcelSense.git](https://github.com/vedantmk1/ExcelSense.git)
+git clone [https://github.com/vedantmk1/ExcelSense.git](https://github.com/vedantmk1/ExcelSense.git)
 cd ExcelSense
 
 2️⃣ Install Dependencies
