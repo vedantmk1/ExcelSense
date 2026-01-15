@@ -64,21 +64,20 @@ Visualization: Chart.js
 
 Storage: Local server storage
 
-## Project Structure
-ExcelSense/<br>
-│<br>
-├── app.py<br>   
-│<br>
-├── templates/<br>
-│   ├── index.html<br>   
-│   └── aboutus.html<br>
-│<br>
-├── static/<br>
-    │──── style.css<br>
-    ├──── about.css<br>
-    ├──── about.js<br>
-    │──── script.js<br>
-    └──── images/<br>
+# Project Structure
+# ExcelSense/<br>
+app.py<br>   
+
+# templates/
+index.html<br>   
+aboutus.html<br>
+
+# static/<br>
+style.css<br>
+about.css<br>
+about.js<br>
+script.js<br>
+logo.png<br>
 
 ## Requirements
 
