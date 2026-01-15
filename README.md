@@ -67,23 +67,20 @@ Storage: Local server storage
 ## Project Structure
 ExcelSense/<br>
 │<br>
-├── app.py<br>
-│   └── Flask backend application<br>
-│<br>
-├── uploads/<br>
-│   └── Uploaded and processed Excel/CSV files<br>
+├── app.py<br>   
 │<br>
 ├── templates/<br>
 │   ├── index.html<br>
-│   │   └── Main application interface<br>
+│   │   
 │   └── aboutus.html<br>
 │<br>
 ├── static/<br>
-    ├── css/<br>
-    │   └── style.css<br>
-    ├── js/<br>
-    │   └── script.js<br>
-    └── images/<br>
+    ├
+    │──── style.css<br>
+    ├──── about.css<br>
+    ├──── about.js<br>
+    │──── script.js<br>
+    └──── images/<br>
 
 ## Requirements
 
