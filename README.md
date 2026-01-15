@@ -64,92 +64,26 @@ Visualization: Chart.js
 
 Storage: Local server storage
 
-Smart Excel Assistant (ExcelSense)
-Turning Excel into Intelligence
-📌 Overview
-
-Smart Excel Assistant (ExcelSense) is a web-based data analysis application that simplifies working with Excel and CSV files. It enables users to upload spreadsheets, perform analytical operations, view key performance indicators (KPIs), visualize results using charts, and download processed data — all without advanced Excel knowledge.
-
-🎯 Objectives
-
-Automate Excel data analysis
-
-Provide instant insights through KPIs
-
-Enable easy data visualization
-
-Reduce manual spreadsheet operations
-
-Make data analysis accessible to non-technical users
-
-🚀 Features
-
-Upload Excel (.xlsx) or CSV (.csv) files
-
-Automatic data parsing and preview
-
-Detection of numeric columns
-
-Analysis operations:
-
-Sum
-
-Average
-
-Top-N values
-
-Group-By aggregation
-
-KPI dashboard:
-
-Total Rows
-
-Sum
-
-Average
-
-Maximum
-
-Minimum
-
-Interactive charts using Chart.js
-
-Download analyzed results as Excel
-
-Simple, responsive, and user-friendly UI
-
-🛠️ Technology Stack
-
-Frontend: HTML, CSS, JavaScript
-
-Backend: Python (Flask)
-
-Data Processing: Pandas
-
-Visualization: Chart.js
-
-Storage: Local server storage
-
 ## Project Structure
-ExcelSense/
-│
-├── app.py
-│   └── Flask backend application
-│
-├── uploads/
-│   └── Uploaded and processed Excel/CSV files
-│
-├── templates/
-│   ├── index.html
-│   │   └── Main application interface
-│   └── aboutus.html
-│
-├── static/
-    ├── css/
-    │   └── style.css
-    ├── js/
-    │   └── script.js
-    └── images/
+ExcelSense/<br>
+│<br>
+├── app.py<br>
+│   └── Flask backend application<br>
+│<br>
+├── uploads/<br>
+│   └── Uploaded and processed Excel/CSV files<br>
+│<br>
+├── templates/<br>
+│   ├── index.html<br>
+│   │   └── Main application interface<br>
+│   └── aboutus.html<br>
+│<br>
+├── static/<br>
+    ├── css/<br>
+    │   └── style.css<br>
+    ├── js/<br>
+    │   └── script.js<br>
+    └── images/<br>
 
 ## Requirements
 
