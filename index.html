@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ExcelSense</title>
+
+    <link rel="icon" href="{{ url_for('static', filename='logo.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <div class="header-content">
+
+        <div class="left-section">
+            <img src="{{ url_for('static', filename='logo.png') }}" class="logo" alt="ExcelSense Logo">
+            <div class="title-text">
+                <h1>ExcelSense.</h1>
+                <p>Talk to your Excel. Get instant insights.</p>
+            </div>
+        </div>
+
+        <div class="right-section">
+            <div class="theme-switch">
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle" onchange="toggleTheme()">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <button class="about-btn"
+                onclick="window.location.href='{{ url_for('about') }}'">
+                About Us
+            </button>
+        </div>
+
+    </div>
+</header>
+
+<!-- ================= MAIN ================= -->
+<div class="container">
+
+    <!-- ================= UPLOAD ================= -->
+    <div class="card highlight">
+        <h2>📁 Upload Excel File</h2>
+        <input type="file" id="fileInput" accept=".xlsx,.xls,.csv">
+        <button id="uploadBtn">Upload</button>
+        <p id="fileName">No file selected</p>
+    </div>
+
+    
+
+    <!-- ================= GRID ================= -->
+    <div class="grid">
+
+        <!-- ================= PREVIEW ================= -->
+        <div class="card">
+            <h2>📄 Data Preview</h2>
+            <div class="preview-box">
+                <p>No data loaded</p>
+            </div>
+        </div>
+
+        <!-- ================= ANALYSIS CENTER ================= -->
+        <div class="card analysis-center">
+            <h2>📊 Analysis Center</h2>
+
+            <!-- Operation -->
+            <label for="operationSelect">Operation</label>
+            <select id="operationSelect">
+                <option value="">Select operation</option>
+                <option value="top">Top N</option>
+                <option value="sum">Sum</option>
+                <option value="average">Average</option>
+                <option value="group">Group By</option>
+            </select>
+
+            <!-- Column -->
+            <label for="columnSelect">Value Column (numeric)</label>
+            <select id="columnSelect">
+                <option value="">Upload file first</option>
+            </select>
+
+            <!-- GROUP BY SECTION -->
+            <div id="groupBox" style="display:none;">
+                <label for="groupColumn">Group Column</label>
+                <select id="groupColumn"></select>
+
+                <label for="aggSelect">Aggregation</label>
+                <select id="aggSelect">
+                    <option value="sum">Sum</option>
+                    <option value="average">Average</option>
+                </select>
+            </div>
+
+            <!-- TOP N -->
+            <div id="topNBox" class="top-n-box" style="display:none;">
+                <label for="topNInput">Top N</label>
+                <input type="number" id="topNInput" min="1" value="5">
+            </div>
+
+            <!-- CHART TYPE -->
+            <label for="chartType">Chart Type</label>
+            <select id="chartType">
+                <option value="bar">Bar</option>
+                <option value="line">Line</option>
+                <option value="pie">Pie</option>
+            </select>
+
+            <button class="primary-btn" onclick="runAnalysis()">
+                ▶ Run Analysis
+            </button>
+
+            <p class="hint">
+                ℹ️ Numeric columns only for Sum, Average, Top N & Group By.
+            </p>
+        </div>
+
+    </div>
+    <!-- ================= KPI DASHBOARD ================= -->
+    <div class="kpi-grid">
+        <div class="kpi-card">
+            <h4>Total Rows</h4>
+            <p id="kpiRows">—</p>
+        </div>
+        <div class="kpi-card">
+            <h4>Sum</h4>
+            <p id="kpiSum">—</p>
+        </div>
+        <div class="kpi-card">
+            <h4>Average</h4>
+            <p id="kpiAvg">—</p>
+        </div>
+        <div class="kpi-card">
+            <h4>Max</h4>
+            <p id="kpiMax">—</p>
+        </div>
+        <div class="kpi-card">
+            <h4>Min</h4>
+            <p id="kpiMin">—</p>
+        </div>
+    </div>
+    <br>
+
+    <!-- ================= RESULT ================= -->
+    <div class="card">
+        <h2>✅ Result Output</h2>
+        <div id="resultBox" class="result-box">
+            <p>Your results will appear here</p>
+        </div>
+    </div>
+
+    <!-- ================= GRAPH ================= -->
+    <div class="card">
+        <h2>📈 Visualization</h2>
+
+        <canvas id="chartCanvas" height="120"></canvas>
+
+        <div class="download">
+            <button id="downloadChartBtn" onclick="downloadChart()">
+                ⬇ Download Chart
+            </button>
+
+            <button id="downloadExcelBtn" onclick="downloadExcel()">
+                ⬇ Download Excel
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p>ExcelSense • Version 1.0</p>
+</footer>
+
+<!-- App Script -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

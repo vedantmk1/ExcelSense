@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{{ url_for('static', filename='logo.png') }}">
+
+    <title>About Us | ExcelSense</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+</head>
+<body>
+
+<!-- Header -->
+<header class="about-header">
+    <h1>About ExcelSense</h1>
+    <p>Smart Excel Analysis Through Intelligent Automation</p>
+
+    <div class="theme-switch">
+        <label class="switch">
+            <input type="checkbox" id="themeToggle" onchange="toggleTheme()">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+</header>
+
+<!-- Main Content -->
+<div class="about-container">
+
+    <div class="card fade-in">
+        <h2>🧠 Who We Are</h2>
+        <p>
+            ExcelSense is a smart Excel assistant that allows users to analyze
+            spreadsheets using natural-language commands. It simplifies
+            traditional Excel operations through automation and intuitive design.
+        </p>
+    </div>
+
+    <div class="card slide-up">
+        <h2>🎯 Our Objective</h2>
+        <ul>
+            <li>Make Excel analysis simple and accessible</li>
+            <li>Reduce dependency on complex formulas</li>
+            <li>Provide instant insights and visualizations</li>
+        </ul>
+    </div>
+
+    <div class="card fade-in">
+        <h2>⚙️ What ExcelSense Does</h2>
+        <ul>
+            <li>Accepts Excel files (.xlsx, .csv)</li>
+            <li>Understands user commands in plain English</li>
+            <li>Performs Excel-based data operations</li>
+            <li>Generates charts and summaries automatically</li>
+        </ul>
+    </div>
+
+    <div class="card slide-up">
+        <h2>🚀 Key Features</h2>
+        <div class="features">
+            <span>Natural Language Interface</span>
+            <span>Excel Automation</span>
+            <span>Data Visualization</span>
+            <span>User-Friendly UI</span>
+        </div>
+    </div>
+
+    <div class="card fade-in">
+        <h2>🛠️ Technology Used</h2>
+        <p>
+            HTML, CSS, JavaScript, Python (Flask/Streamlit),
+            Excel Automation, Keyword-based NLP
+        </p>
+    </div>
+
+    <div class="actions">
+        <button onclick="openPopup()">🔮 Future Scope</button>
+        <a href="{{ url_for('index') }}" class="back-btn">Back to Home</a>
+    </div>
+
+</div>
+
+<!-- Popup Modal -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">×</span>
+        <h2>🔮 Future Scope</h2>
+        <ul>
+            <li>AI-powered data insights</li>
+            <li>Voice-based command interaction</li>
+            <li>Advanced analytics & dashboards</li>
+            <li>Multi-sheet Excel analysis</li>
+        </ul>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='about.js') }}"></script>
+</body>
+</html>
