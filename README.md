@@ -66,16 +66,14 @@ Storage: Local server storage
 
 ## Project Structure
 ExcelSense/<br>
-│<br>
+│
 ├── app.py<br>   
-│<br>
+│
 ├── templates/<br>
-│   ├── index.html<br>
-│   │   
+│   ├── index.html<br>   
 │   └── aboutus.html<br>
-│<br>
+│
 ├── static/<br>
-    ├
     │──── style.css<br>
     ├──── about.css<br>
     ├──── about.js<br>
